@@ -8,7 +8,9 @@ const errorHandler = require('./middleware/errorhandler');
 const notFound = require('./middleware/notfound');
 const PORT = process.env.PORT || 3000;
 
-app.use('tiffin/api/v1',router);
+
+app.use(express.json())
+app.use('/tiffin/api/v1',router);
 app.use(errorHandler);
 app.use(notFound);
 
