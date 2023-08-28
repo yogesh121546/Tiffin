@@ -5,7 +5,7 @@ const CUSTOMER = require('../models/customer');
 const signup_tiffin_provider = async_wrapper(async(req,res)=>{
     console.log(req.body)
     const {name,address,mobile_no} = req.body;
-    const tiffin = await Tiffin_provider.create({name:name,address:address,mobile_no:mobile_no,Tiffin_provider_code:"aklsdfkj;adff"});
+    const tiffin = await Tiffin_provider.create({_id:mobile_no, name:name,address:address,mobile_no:mobile_no});
     console.log("tiffin provider successfully signup!")
     res.json(tiffin);
 });
