@@ -29,10 +29,12 @@ const customer_schema = new mongoose.Schema({
         },
     ],
     Today_orders:{
+        date: Date,
         lunch:Number,
         dinner: Number
     },
     Tommorow_orders:{
+        date: Date,
         lunch:Number,
         dinner:Number
     }

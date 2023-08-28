@@ -13,11 +13,8 @@ const Tiffin_provider_schema = new mongoose.Schema({
     type: String,
     require: true
    },
-   // Tiffin_provider_code:{
-   //  type:String,
-   //  required:true
-   // },
-   customer_requests:[mongoose.Types.ObjectId],
-   accepted_customers:[mongoose.Types.ObjectId]
+
+   customer_requests:[String],
+   accepted_customers:[String]
 }) 
 module.exports= mongoose.model('TIFFIN',Tiffin_provider_schema);
